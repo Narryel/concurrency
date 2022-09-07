@@ -1,10 +1,5 @@
 fun main() {
-    val runnable = {
-        while (true) {
-            println("$prefix is running")
-            Thread.sleep(1000)
-        }
-    }
+    val runnable = infiniteRunnable()
 
     println("$prefix starting another thread")
 
@@ -16,6 +11,16 @@ fun main() {
 
     Thread.sleep(5000)
     println("$prefix finished")
+}
+
+fun infiniteRunnable(): () -> Unit {
+    val runnable = {
+        while (true) {
+            println("$prefix is running")
+            Thread.sleep(1000)
+        }
+    }
+    return runnable
 }
 
 val prefix: String
