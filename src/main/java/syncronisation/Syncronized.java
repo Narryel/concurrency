@@ -1,3 +1,5 @@
+package syncronisation;
+
 public class Syncronized {
     public static void main(String[] args) {
         var exchanger = new SyncronizedExchanger();

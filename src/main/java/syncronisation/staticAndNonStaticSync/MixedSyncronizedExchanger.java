@@ -1,5 +1,6 @@
+package syncronisation.staticAndNonStaticSync;
 
-class SyncronizedExchanger {
+class MixedSyncronizedExchanger {
 
     private Object object = null;
 
@@ -21,7 +22,7 @@ class SyncronizedExchanger {
     }
 
     public void setObj(Object object) {
-        synchronized (this) {
+        synchronized (this.getClass()) {
             this.object = object;
         }
     }

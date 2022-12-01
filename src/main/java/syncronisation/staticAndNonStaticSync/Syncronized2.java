@@ -1,4 +1,4 @@
-package staticAndNonStaticSync;
+package syncronisation.staticAndNonStaticSync;
 
 public class Syncronized2 {
     public static void main(String[] args) {
